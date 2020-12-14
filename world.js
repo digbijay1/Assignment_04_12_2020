@@ -1,5 +1,5 @@
 //var world=document.getElementById("digu")
-var count=1;
+//var count=1;
 function res(){
   //  if(count==1){
     foo1()
@@ -22,6 +22,7 @@ async function foo1(){
     
        //console.log(abc)
       var some_thing=await loadUserworld();
+      document.getElementById('newsBody').innerHTML = ''
     for(var i=0;i<some_thing.results.length;i++){
      var card_head=document.createElement("div")
      card_head.setAttribute("class","card-header")   
@@ -43,9 +44,11 @@ async function foo1(){
      div1.setAttribute("class","card")
      div1.appendChild(card_body)
      div1.appendChild(card_head)
-     document.body.appendChild(div1)
+     const newsBody = document.getElementById('newsBody');
+     newsBody.append(div1);
+     document.body.appendChild(newsBody);
      }
-     count--;
+    // count--;
     }
     
  
